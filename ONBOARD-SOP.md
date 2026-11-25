@@ -50,7 +50,7 @@ claude --version
 把這顆種子 clone 成使用者自己的 workspace：
 
 ```bash
-git clone https://github.com/frank890417/muse-crystal-seed.git ~/my-agent
+git clone https://github.com/ycs77/muse-crystal-seed.git ~/my-agent
 cd ~/my-agent
 ```
 

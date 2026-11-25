@@ -2,16 +2,16 @@
 # 晶種一鍵安裝
 #
 #   整顆晶種（新的 AI 夥伴 workspace，預設裝到 ~/my-agent）：
-#     curl -fsSL https://raw.githubusercontent.com/frank890417/muse-crystal-seed/main/install.sh | bash
-#     curl -fsSL https://raw.githubusercontent.com/frank890417/muse-crystal-seed/main/install.sh | bash -s -- ~/想放的資料夾
+#     curl -fsSL https://raw.githubusercontent.com/ycs77/muse-crystal-seed/main/install.sh | bash
+#     curl -fsSL https://raw.githubusercontent.com/ycs77/muse-crystal-seed/main/install.sh | bash -s -- ~/想放的資料夾
 #
 #   只裝技能到你已經有的資料夾（例如 Obsidian 知識庫）：
-#     curl -fsSL https://raw.githubusercontent.com/frank890417/muse-crystal-seed/main/install.sh | bash -s -- --skills ~/你的知識庫
+#     curl -fsSL https://raw.githubusercontent.com/ycs77/muse-crystal-seed/main/install.sh | bash -s -- --skills ~/你的知識庫
 #
 # 這支腳本不刪你的任何檔案：同名技能已經存在就跳過，不覆蓋。
 set -euo pipefail
 
-REPO="${CRYSTAL_SEED_REPO:-https://github.com/frank890417/muse-crystal-seed.git}"
+REPO="${CRYSTAL_SEED_REPO:-https://github.com/ycs77/muse-crystal-seed.git}"
 MODE="seed"
 TARGET=""
 

@@ -15,7 +15,7 @@
 **整顆晶種**（一個新的 AI 夥伴 workspace，裝到 `~/my-agent`）：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/frank890417/muse-crystal-seed/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ycs77/muse-crystal-seed/main/install.sh | bash
 ```
 
 想裝到別的資料夾，在最後加上路徑：`… | bash -s -- ~/想放的地方`
@@ -23,21 +23,21 @@ curl -fsSL https://raw.githubusercontent.com/frank890417/muse-crystal-seed/main/
 **只裝技能**到你已經有的資料夾（例如你的 Obsidian 知識庫）：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/frank890417/muse-crystal-seed/main/install.sh | bash -s -- --skills ~/你的知識庫
+curl -fsSL https://raw.githubusercontent.com/ycs77/muse-crystal-seed/main/install.sh | bash -s -- --skills ~/你的知識庫
 ```
 
 同名技能已經存在就跳過，不會蓋掉你的檔案。裝完重開 Claude Code，在對話框打 `/` 就看得到。
 
 **不想開終端機？** 在 Claude Code 裡直接說：
 
-> 幫我把 https://github.com/frank890417/muse-crystal-seed 的 .agents/skills 裡所有技能，還有 tools/log.sh，複製到這個資料夾（同名的跳過，不要覆蓋），然後告訴我裝了哪些。
+> 幫我把 https://github.com/ycs77/muse-crystal-seed 的 .agents/skills 裡所有技能，還有 tools/log.sh，複製到這個資料夾（同名的跳過，不要覆蓋），然後告訴我裝了哪些。
 
 ## ⚡ Quick Start（手動）
 
 1. Clone 這顆種子當你的 workspace：
 
 ```bash
-git clone https://github.com/frank890417/muse-crystal-seed.git ~/my-agent
+git clone https://github.com/ycs77/muse-crystal-seed.git ~/my-agent
 cd ~/my-agent
 claude
 ```
