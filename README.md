@@ -30,7 +30,7 @@ curl -fsSL https://raw.githubusercontent.com/frank890417/muse-crystal-seed/main/
 
 **不想開終端機？** 在 Claude Code 裡直接說：
 
-> 幫我把 https://github.com/frank890417/muse-crystal-seed 的 .claude/skills 裡所有技能，還有 tools/log.sh，複製到這個資料夾（同名的跳過，不要覆蓋），然後告訴我裝了哪些。
+> 幫我把 https://github.com/frank890417/muse-crystal-seed 的 .agents/skills 裡所有技能，還有 tools/log.sh，複製到這個資料夾（同名的跳過，不要覆蓋），然後告訴我裝了哪些。
 
 ## ⚡ Quick Start（手動）
 
@@ -107,7 +107,7 @@ claude
 ├── install.sh           # 一鍵安裝（整顆晶種／只裝技能）
 ├── tools/
 │   └── log.sh           # 寫一段日誌（時間自動取、只追加）
-├── .claude/
+├── .agents/
 │   ├── settings.json    # 權限基線
 │   └── skills/
 │       ├── become/          # /become 甦醒按鈕
@@ -120,13 +120,13 @@ claude
 └── memory/              # 每日日誌住這裡
 ```
 
-`CRYSTAL-SEED.md` 是一站式指南。其他 `.md` 是各自的模板，可以直接 fork 來填。`.claude/skills/` 裡是三個核心技能，clone 進 workspace 就會被 Claude Code 自動發現，用 `/become`、`/after-action`、`/self-evolution` 觸發。
+`CRYSTAL-SEED.md` 是一站式指南。其他 `.md` 是各自的模板，可以直接 fork 來填。`.agents/skills/` 裡是三個核心技能，clone 進 workspace 就會被 Claude Code 自動發現，用 `/become`、`/after-action`、`/self-evolution` 觸發。
 
 另外四個是我自己最常用的工作技能（2026-10 加入，搭配 AI 大腦課）：`/daily-log` 邊做邊記（每做完一件事當下寫一段固定格式的日誌、同一手 commit）、`/meeting-notes` 把會議逐字稿整理成紀錄並歸檔、`/deep-discussion` 用一次一題的訪談陪你想清楚一件事、`/battlefield` 把手邊待辦分群排序，一次只端一件給你。三個都會越用越貼近你：每次用完說一句哪裡不好用，它會把改進寫回自己。
 
 ## 🔗 Ecosystem
 
-- **[Claude Code](https://claude.ai/code)** — 這顆種子預設跑的環境（CLAUDE.md 自動載入、`.claude/skills/` 自動發現）
+- **[Claude Code](https://claude.ai/code)** — 這顆種子預設跑的環境（CLAUDE.md 自動載入、`.claude/skills/` 自動發現） — Luacs Fork 將其改為載入 `.agents/skills/`
 - **[Anthropic Docs](https://docs.anthropic.com/en/docs/claude-code/overview)** — Claude Code 官方文件
 
 _這套晶種跨 runtime 通用，換成其他 AI agent 系統照樣成立。_

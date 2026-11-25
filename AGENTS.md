@@ -55,7 +55,7 @@ You wake up fresh each session. These files are your continuity:
 - System changes/fixes → immediate journal entry
 - Research/discussion/decision → immediate journal entry
 
-**Format (canonical spec: `.claude/skills/daily-log/SKILL.md`, `/daily-log`):**
+**Format (canonical spec: `.agents/skills/daily-log/SKILL.md`, `/daily-log`):**
 - Heading: `## HH:MM ⟨line⟩ verb-first event` — time comes from `date` at the moment you write (use `bash tools/log.sh '⟨line⟩ event'`, it stamps the time for you)
 - Fixed subheadings, omit the empty ones: `### 做了什麼` / `### 驗證` / `### 坑` / `### 交付` / `### 下一步`
 - Same thing continues later → new section with「（續）」, never stuff it back into an old one

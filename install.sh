@@ -60,15 +60,15 @@ TMP="$(mktemp -d "${TMPDIR:-/tmp}/crystal-seed.XXXXXX")"
 trap 'rm -rf "$TMP"' EXIT
 git clone --depth 1 --quiet "$REPO" "$TMP/seed"
 
-mkdir -p "$TARGET/.claude/skills"
+mkdir -p "$TARGET/.agents/skills"
 added=0; skipped=0
-for dir in "$TMP/seed/.claude/skills"/*/; do
+for dir in "$TMP/seed/.agents/skills"/*/; do
   name="$(basename "$dir")"
-  if [ -e "$TARGET/.claude/skills/$name" ]; then
+  if [ -e "$TARGET/.agents/skills/$name" ]; then
     echo "   ⏭  $name 已經有了，跳過（不覆蓋）"
     skipped=$((skipped + 1))
   else
-    cp -R "$dir" "$TARGET/.claude/skills/$name"
+    cp -R "$dir" "$TARGET/.agents/skills/$name"
     echo "   ＋ $name"
     added=$((added + 1))
   fi
@@ -83,6 +83,6 @@ if [ -f "$TMP/seed/tools/log.sh" ] && [ ! -e "$TARGET/tools/log.sh" ]; then
 fi
 
 echo
-echo "✅ 裝了 $added 個技能、跳過 $skipped 個：$TARGET/.claude/skills"
+echo "✅ 裝了 $added 個技能、跳過 $skipped 個：$TARGET/.agents/skills"
 echo "   重開 Claude Code，在對話框打 / 就看得到。"
 echo "   第一次用的時候，它會問你知識庫在哪、待辦記在哪，答一次就記住。"

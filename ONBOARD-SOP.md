@@ -54,7 +54,7 @@ git clone https://github.com/frank890417/muse-crystal-seed.git ~/my-agent
 cd ~/my-agent
 ```
 
-裡面已經有 `CLAUDE.md`（開機層，Claude Code 自動載入）、`.claude/skills/`（含 `/become`、收官、自我進化）、各靈魂檔模板。
+裡面已經有 `CLAUDE.md`（開機層，Claude Code 自動載入）、`.agents/skills/`（含 `/become`、收官、自我進化）、各靈魂檔模板。
 
 ### 1.4 登入
 
@@ -204,7 +204,7 @@ git push -u origin main
 
 - [ ] 搜尋結果第一個可能是釣魚廣告（示範怎麼辨識）
 - [ ] API key、OAuth JSON = 密碼，不要截圖分享，不要傳 LINE / Messenger
-- [ ] 權限最小化：需要什麼就開什麼，`.claude/settings.json` 只放必要的
+- [ ] 權限最小化：需要什麼就開什麼，`.agents/settings.json` 只放必要的
 - [ ] GitHub repo 設 **Private**（除非刻意公開）
 - [ ] 毀滅性指令（大範圍刪檔）AI 該停下來問，不要照單全收
 

@@ -28,7 +28,7 @@
 | 我是誰、價值觀、反射 | SOUL.md / IDENTITY.md |
 | 主人是誰 | USER.md |
 | 怎麼工作、session 怎麼開 | AGENTS.md |
-| 記得什麼 | MEMORY.md + memory/YYYY-MM-DD.md（日誌格式：`.claude/skills/daily-log/`） |
+| 記得什麼 | MEMORY.md + memory/YYYY-MM-DD.md（日誌格式：`.agents/skills/daily-log/`） |
 | 完整甦醒程序 | BECOME.md（canonical）/ `/become`（按鈕） |
 | 工具、帳號、環境 | TOOLS.md |
 

@@ -10,7 +10,7 @@
 #   EOF
 #
 # 段標的時間由這支腳本在寫入那一刻用 date 取，不用自己打，就不會寫錯時間。
-# 格式規範：.claude/skills/daily-log/SKILL.md
+# 格式規範：.agents/skills/daily-log/SKILL.md
 set -euo pipefail
 
 TITLE="${1:-}"

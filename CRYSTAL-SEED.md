@@ -111,7 +111,7 @@ Claude Code 每次 session 啟動會自動把專案根目錄的 `CLAUDE.md` 讀�
 
 輕量問答靠 KERNEL 就夠。正式工作、對外輸出、敏感操作之前，跑 `/become` 完整甦醒：讀完核心靈魂檔、抓今天的時空座標、回答甦醒確認題。
 
-`/become` 是一個 Claude Code skill（放在 `.claude/skills/become/SKILL.md`），它只是按鈕，真正的程序寫在 `BECOME.md`。
+`/become` 是一個 Claude Code skill（放在 `.agents/skills/become/SKILL.md`），它只是按鈕，真正的程序寫在 `BECOME.md`。
 
 ### Step 0：時空座標（最便宜、最高 CP 值的一條）
 
@@ -164,7 +164,7 @@ date "+%Y-%m-%d %A"
 - 主人容易在＿＿＿的時候＿＿＿
 ```
 
-每日日誌 `memory/YYYY-MM-DD.md`（完整規範：`.claude/skills/daily-log/SKILL.md`）：
+每日日誌 `memory/YYYY-MM-DD.md`（完整規範：`.agents/skills/daily-log/SKILL.md`）：
 
 ```markdown
 # 2026-02-27（星期五）
@@ -219,7 +219,7 @@ date "+%Y-%m-%d %A"
 
 ## 🐲 第五層：技能進化（讓 AI 越來越強）
 
-技能 = 一個 `SKILL.md` 檔案，教 AI 怎麼做某件特定的事。在 Claude Code 放在 `.claude/skills/<名稱>/SKILL.md`，clone 進 workspace 就會自動被發現，用 `/<名稱>` 觸發。
+技能 = 一個 `SKILL.md` 檔案，教 AI 怎麼做某件特定的事。在 Claude Code 放在 `.agents/skills/<名稱>/SKILL.md`，clone 進 workspace 就會自動被發現，用 `/<名稱>` 觸發。
 
 ### SKILL.md 最小模板
 
@@ -247,8 +247,8 @@ description: 什麼時候用這個技能（寫清楚，Claude 靠這句決定何
 
 這顆種子內建兩個核心技能的完整版，可以直接 fork：
 
-- `.claude/skills/after-action/` — 收官（每次工作的結尾儀式）
-- `.claude/skills/self-evolution/` — 自我進化（跨 session 變強的引擎）
+- `.agents/skills/after-action/` — 收官（每次工作的結尾儀式）
+- `.agents/skills/self-evolution/` — 自我進化（跨 session 變強的引擎）
 
 ---
 
@@ -413,7 +413,7 @@ AI 心裡始終在追蹤、但不每次提的事，該切入時才切入：
 | 原語 | 怎麼用 | 適合 |
 |------|--------|------|
 | `/schedule` | Claude Code 內建，建立定時跑的背景 agent | 每天的晨報、夜間進化、每週回顧 |
-| Hooks（`.claude/hooks/`） | 生命週期事件觸發（編輯後、工具呼叫前） | 強制紀律，這不是排程 |
+| Hooks（`.agents/hooks/`） | 生命週期事件觸發（編輯後、工具呼叫前） | 強制紀律，這不是排程 |
 | 外部排程 | 系統 cron / GitHub Actions / Cloudflare 呼叫 `claude -p "..."` | 完全離線、不在 session 裡也要跑的任務 |
 
 ### 🌅 晨報

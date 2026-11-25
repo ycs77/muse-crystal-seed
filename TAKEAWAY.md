@@ -21,7 +21,7 @@ _This was auto-generated at the end of your onboarding session._
 ## 📋 This Week's Homework
 - [ ] Chat with your agent at least 10 minutes daily
 - [ ] After one week, review MEMORY.md — is it accurate?
-- [ ] Try building your first skill in `.claude/skills/` (ask your agent how)
+- [ ] Try building your first skill in `.agents/skills/` (ask your agent how)
 - [ ] When something annoys you, tell your agent — it'll learn
 - [ ] Run `/after-action` at the end of a working session
 
